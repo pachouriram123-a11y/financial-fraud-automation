@@ -1,81 +1,251 @@
-```
+# 🚨 AI-Powered Fraud Monitoring & Alert Automation using n8n
 
-## 🚀 Future Roadmap
-* **Machine Learning Integration:** Moving from rule-based to predictive scoring using regression models.
-* **Notification Expansion:** Integrating WhatsApp Business API and Slack for instant SOC alerts.
-* **Regulatory Compliance:** Automating RBI/FEMA reporting formats for direct regulatory submission.
+<p align="center">
+Automated Financial Fraud Detection • Risk Scoring • Email Alerting
+</p>
 
-## 👨‍💻 Author
-**Rohit Pachouri**
-IPM Student | Finance & BusinessTo create a professional GitHub presence, I have refined your README into a clean, technical documentation format. Per your request, the screenshots have been referenced in the code structure but are not rendered as images in the display.
-```markdown
-# Financial Fraud Detection & Risk Scoring Automation
+---
 
-An enterprise-grade automation workflow built with **n8n**, **Google Sheets**, and **Gmail API** designed to perform real-time transaction risk scoring and fraud classification for financial institutions.
+## 📌 Project Overview
 
-## 📌 Executive Summary
-In high-volume digital banking environments, manual fraud review is often a bottleneck that increases operational risk. This project implements a **Rule-Based Risk Engine** that automates the transition from "End-of-Day" batch processing to "Real-Time" proactive monitoring.
+This project automates the detection and monitoring of suspicious financial transactions using **n8n**, **Google Sheets**, and **Gmail Alerts**.
 
-### Key Objectives
-* **Scalability:** Handle thousands of transactions without increasing analyst headcount.
-* **Accuracy:** Utilize a 12-point heuristic scoring model to identify suspicious patterns.
-* **Auditability:** Generate a continuous, immutable log within Google Sheets for compliance.
+The workflow reads transaction data, evaluates fraud conditions using predefined business rules, calculates a risk score, classifies transaction risk level, updates the monitoring sheet, and automatically sends alerts for suspicious activity.
 
-## 🏗️ Technical Architecture
-The system follows a modular pipeline to ensure data integrity and low latency:
+This project simulates a modern fraud monitoring pipeline used in financial operations and risk management.
 
-1.  **Ingestion:** Real-time triggers pull transaction data from Google Sheets.
-2.  **Processing:** A custom JavaScript engine evaluates the data against predefined fraud heuristics.
-3.  **Classification:** Logic gates categorize transactions based on cumulative risk scores.
-4.  **Action:** Instant multi-channel alerts (Gmail) are triggered for high-risk anomalies, while low-risk events are logged silently.
+---
 
-## 🛡️ Detection Model (Heuristic Rules)
-The engine evaluates each transaction against a weighted scoring system, including:
+# 🎯 Objectives
 
-| Rule ID | Logic Description |
-| :--- | :--- |
-| **R1 & R8** | High Value & First-Time High Value Transactions (> ₹50,000) |
-| **R2 & R3** | Round Amount Detection and Micro-Probe (Testing) Patterns |
-| **R4 & R5** | Velocity Breaches and Known "Mule Account" Transaction Behaviors |
-| **R6 & R7** | Temporal Anomalies: Off-Hours Trading and Dormant Account Spikes |
-| **R9 - R12** | Geographic & Structural Risks: Unknown Locations and Cross-Border Splits |
+- Automate fraud monitoring
+- Reduce manual transaction review
+- Detect high-risk transactions instantly
+- Trigger automated email alerts
+- Improve operational efficiency
+- Demonstrate AI + Workflow Automation concepts
 
-## 📊 Performance Benchmarks
-| Metric | Manual Review | n8n Automated Workflow |
-| :--- | :--- | :--- |
-| **Latency** | 3–4 Hours | **16.8 Seconds** |
-| **Intervention** | 100% Manual | **Zero (Exception-based only)** |
-| **Monitoring** | Reactive | **Real-Time / Proactive** |
+---
 
-## 📂 Repository Structure
+# 🏗 Solution Architecture
+
 ```text
-fraud-detection-n8n/
+Google Sheets
+      ↓
+Transaction Read
+      ↓
+n8n Workflow
+      ↓
+JavaScript Rule Engine
+      ↓
+Risk Scoring
+      ↓
+Status Classification
+      ↓
+Update Dataset
+      ↓
+Email Alert System
+```
+
+---
+
+# ⚙ Workflow Process
+
+### Step 1 — Read Transaction Dataset
+Import transaction records from Google Sheets.
+
+### Step 2 — Execute Fraud Logic
+Evaluate transactions using fraud rules.
+
+### Step 3 — Generate Risk Score
+Assign risk based on triggered indicators.
+
+### Step 4 — Update Dataset
+Store:
+- Triggered Rules
+- Risk Score
+- Fraud Status
+
+### Step 5 — Send Alerts
+Generate automated notifications.
+
+---
+
+# 🧠 Fraud Detection Rules
+
+| Rule | Detection Logic |
+|------|----------------|
+| R1 | High Value Transaction |
+| R2 | Round Amount Detection |
+| R3 | Micro Pattern |
+| R4 | Impossible Travel |
+| R5 | Mule Account Pattern |
+| R6 | Off Hours Activity |
+| R7 | Dormant Account Spike |
+| R8 | First High Value |
+| R9 | Foreign Location |
+| R11 | UPI Abuse |
+| R12 | Cross Border Activity |
+
+---
+
+# 📊 Risk Classification
+
+| Risk Score | Status |
+|-----------|--------|
+| 0 | Clear |
+| 1 | Low Risk |
+| 2–3 | Medium Risk |
+| 4+ | High Risk |
+
+---
+
+# 📸 Project Screenshots
+
+## 1. Fraud Monitoring Dataset
+
+Create folder:
+
+```text
+assets/
+```
+
+Save your Google Sheet screenshot as:
+
+```text
+assets/fraud-monitoring-sheet.png
+```
+
+Add:
+
+```md
+![Fraud Monitoring Dataset](assets/fraud-monitoring-sheet.png)
+```
+
+---
+
+## 2. High Risk Email Alert
+
+Save:
+
+```text
+assets/high-risk-alert.png
+```
+
+Add:
+
+```md
+![High Risk Alert](assets/high-risk-alert.png)
+```
+
+---
+
+## 3. Medium Risk Email Alert
+
+Save:
+
+```text
+assets/medium-risk-alert.png
+```
+
+Add:
+
+```md
+![Medium Risk Alert](assets/medium-risk-alert.png)
+```
+
+---
+
+## 4. n8n Workflow Automation
+
+Save:
+
+```text
+assets/n8n-workflow.png
+```
+
+Add:
+
+```md
+![Workflow Architecture](assets/n8n-workflow.png)
+```
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| n8n | Workflow Automation |
+| Google Sheets | Data Storage |
+| JavaScript | Fraud Logic |
+| Gmail | Notifications |
+| Risk Analytics | Monitoring |
+
+---
+
+# 📂 Repository Structure
+
+```text
+fraud-monitoring-automation/
+│
+├── README.md
 ├── workflow/
-│   └── fraud-monitoring-data.json      # n8n Workflow Export
-├── assets/                             # Documentation Assets
-│   ├── n8n project.png                 # Workflow Schematic
-│   ├── google-sheet.png                # Monitoring Dashboard
-│   ├── high-risk-alert.png             # Alert Template (High)
-│   └── medium-risk-alert.png           # Alert Template (Medium)
-├── README.md                           # Project Documentation
-└── LICENSE
-
+│     └── workflow.json
+│
+├── assets/
+│     ├── fraud-monitoring-sheet.png
+│     ├── high-risk-alert.png
+│     ├── medium-risk-alert.png
+│     └── n8n-workflow.png
+│
+└── docs/
 ```
 
-## 🚀 Future Roadmap
+---
 
-* **Machine Learning Integration:** Moving from rule-based to predictive scoring using regression models.
-* **Notification Expansion:** Integrating WhatsApp Business API and Slack for instant SOC alerts.
-* **Regulatory Compliance:** Automating RBI/FEMA reporting formats for direct regulatory submission.
+# 🚀 Run Locally
 
-## 👨‍💻 Author
+### Clone Repository
 
-**Rohit Pachouri**
-IPM Student | Finance & Business Analytics
-Chitkara University
-[LinkedIn Profile](https://www.google.com/search?q=https://www.linkedin.com/in/rohitpachori)
-
+```bash
+git clone <repository-url>
 ```
 
+### Import Workflow
 
+```bash
+Open n8n
+→ Import Workflow
+→ Configure Credentials
+→ Execute Workflow
 ```
+
+---
+
+# 📈 Future Improvements
+
+- Machine Learning Risk Scoring
+- Real-Time Fraud Detection
+- Dashboard Integration
+- API Connectivity
+- WhatsApp Alerts
+- Cloud Deployment
+
+---
+
+# 👨‍💻 Developed By
+
+## Ram Pachori
+
+MBA (Applied Finance)  
+Chitkara University  
+
+AI • Workflow Automation • Fraud Analytics • Risk Monitoring
+
+LinkedIn: *(Add your profile)*  
+GitHub: *(Add your GitHub link)*
+
+---
+
+## ⭐ If you found this project useful, give it a star.
