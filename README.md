@@ -1,29 +1,30 @@
+I fixed the screenshot section so GitHub will actually display images. Copy this full README and replace your current one.
+
 # 🚨 AI-Powered Fraud Monitoring & Alert Automation using n8n
 
 <p align="center">
-Automated Financial Fraud Detection • Risk Scoring • Email Alerting
+Automated Financial Fraud Detection • Risk Scoring • Workflow Automation • Email Alerts
 </p>
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-This project automates the detection and monitoring of suspicious financial transactions using **n8n**, **Google Sheets**, and **Gmail Alerts**.
+This project automates financial fraud monitoring using **n8n**, **Google Sheets**, **JavaScript**, and **Gmail**.
 
-The workflow reads transaction data, evaluates fraud conditions using predefined business rules, calculates a risk score, classifies transaction risk level, updates the monitoring sheet, and automatically sends alerts for suspicious activity.
+The workflow reads transaction records, applies fraud detection rules, calculates a risk score, classifies transaction risk level, updates the monitoring sheet automatically, and triggers email notifications for suspicious activity.
 
-This project simulates a modern fraud monitoring pipeline used in financial operations and risk management.
+This project demonstrates a real-world fraud monitoring process commonly used in financial operations and risk management.
 
 ---
 
 # 🎯 Objectives
 
-- Automate fraud monitoring
-- Reduce manual transaction review
-- Detect high-risk transactions instantly
-- Trigger automated email alerts
-- Improve operational efficiency
-- Demonstrate AI + Workflow Automation concepts
+* Automate fraud monitoring
+* Detect suspicious transactions
+* Generate real-time alerts
+* Reduce manual review effort
+* Improve operational efficiency
 
 ---
 
@@ -32,205 +33,165 @@ This project simulates a modern fraud monitoring pipeline used in financial oper
 ```text
 Google Sheets
       ↓
-Transaction Read
+Read Transactions
       ↓
 n8n Workflow
       ↓
-JavaScript Rule Engine
+Fraud Rule Engine
       ↓
 Risk Scoring
       ↓
-Status Classification
+Update Sheet
       ↓
-Update Dataset
-      ↓
-Email Alert System
+Email Notifications
 ```
 
 ---
 
 # ⚙ Workflow Process
 
-### Step 1 — Read Transaction Dataset
-Import transaction records from Google Sheets.
+### Step 1 — Extract Transaction Data
 
-### Step 2 — Execute Fraud Logic
-Evaluate transactions using fraud rules.
+Read transaction records from Google Sheets.
 
-### Step 3 — Generate Risk Score
-Assign risk based on triggered indicators.
+### Step 2 — Execute Fraud Rules
+
+Apply rule-based fraud detection.
+
+### Step 3 — Calculate Risk Score
+
+Generate fraud score.
 
 ### Step 4 — Update Dataset
+
 Store:
-- Triggered Rules
-- Risk Score
-- Fraud Status
+
+* Rules Triggered
+* Risk Score
+* Fraud Status
 
 ### Step 5 — Send Alerts
-Generate automated notifications.
+
+Trigger automated notifications.
 
 ---
 
 # 🧠 Fraud Detection Rules
 
-| Rule | Detection Logic |
-|------|----------------|
-| R1 | High Value Transaction |
-| R2 | Round Amount Detection |
-| R3 | Micro Pattern |
-| R4 | Impossible Travel |
-| R5 | Mule Account Pattern |
-| R6 | Off Hours Activity |
-| R7 | Dormant Account Spike |
-| R8 | First High Value |
-| R9 | Foreign Location |
-| R11 | UPI Abuse |
-| R12 | Cross Border Activity |
+| Rule | Description            |
+| ---- | ---------------------- |
+| R1   | High Value Transaction |
+| R2   | Round Amount Detection |
+| R3   | Micro Probe            |
+| R4   | Impossible Travel      |
+| R5   | Mule Account Pattern   |
+| R6   | Off Hours Activity     |
+| R7   | Dormant Account Spike  |
+| R8   | First High Value       |
+| R9   | Foreign Location       |
+| R11  | UPI Abuse              |
+| R12  | Cross Border Activity  |
 
 ---
 
 # 📊 Risk Classification
 
-| Risk Score | Status |
-|-----------|--------|
-| 0 | Clear |
-| 1 | Low Risk |
-| 2–3 | Medium Risk |
-| 4+ | High Risk |
+| Risk Score | Status      |
+| ---------- | ----------- |
+| 0          | CLEAR       |
+| 1          | LOW RISK    |
+| 2–3        | MEDIUM RISK |
+| 4+         | HIGH RISK   |
 
 ---
 
 # 📸 Project Screenshots
 
-## 1. Fraud Monitoring Dataset
+## Fraud Monitoring Dataset
 
-Create folder:
+<img src="./screenshot/assetsgoogle-sheet.png.png" width="1000"/>
 
-```text
-assets/
-```
+Shows:
 
-Save your Google Sheet screenshot as:
-
-```text
-assets/fraud-monitoring-sheet.png
-```
-
-Add:
-
-```md
-![Fraud Monitoring Dataset](assets/fraud-monitoring-sheet.png)
-```
+* Transaction data
+* Fraud status
+* Risk score
+* Triggered rules
 
 ---
 
-## 2. High Risk Email Alert
+## 🔴 High Risk Alert
 
-Save:
+<img src="./screenshot/assetshigh-risk-alert.png.png" width="1000"/>
 
-```text
-assets/high-risk-alert.png
-```
-
-Add:
-
-```md
-![High Risk Alert](assets/high-risk-alert.png)
-```
+Automated alert for high-risk transactions.
 
 ---
 
-## 3. Medium Risk Email Alert
+## 🟠 Medium Risk Alert
 
-Save:
+<img src="./screenshot/assetsmedium-risk-alert.png.png" width="1000"/>
 
-```text
-assets/medium-risk-alert.png
-```
-
-Add:
-
-```md
-![Medium Risk Alert](assets/medium-risk-alert.png)
-```
+Automated review notification.
 
 ---
 
-## 4. n8n Workflow Automation
+## 🔄 n8n Workflow
 
-Save:
+<img src="./screenshot/n8n project.png" width="1000"/>
 
-```text
-assets/n8n-workflow.png
-```
-
-Add:
-
-```md
-![Workflow Architecture](assets/n8n-workflow.png)
-```
+Workflow orchestration and fraud evaluation process.
 
 ---
 
 # 🛠 Tech Stack
 
-| Technology | Purpose |
-|-----------|---------|
-| n8n | Workflow Automation |
-| Google Sheets | Data Storage |
-| JavaScript | Fraud Logic |
-| Gmail | Notifications |
-| Risk Analytics | Monitoring |
+| Technology     | Purpose             |
+| -------------- | ------------------- |
+| n8n            | Workflow Automation |
+| Google Sheets  | Data Storage        |
+| JavaScript     | Fraud Rules         |
+| Gmail          | Notifications       |
+| Risk Analytics | Monitoring          |
 
 ---
 
 # 📂 Repository Structure
 
 ```text
-fraud-monitoring-automation/
+n8n/
 │
 ├── README.md
+│
+├── screenshot/
+│   ├── assetsgoogle-sheet.png.png
+│   ├── assetshigh-risk-alert.png.png
+│   ├── assetsmedium-risk-alert.png.png
+│   └── n8n project.png
+│
 ├── workflow/
-│     └── workflow.json
-│
-├── assets/
-│     ├── fraud-monitoring-sheet.png
-│     ├── high-risk-alert.png
-│     ├── medium-risk-alert.png
-│     └── n8n-workflow.png
-│
-└── docs/
+│   └── Fraud monitoring data.json
 ```
 
 ---
 
-# 🚀 Run Locally
-
-### Clone Repository
+# 🚀 Run Project
 
 ```bash
 git clone <repository-url>
 ```
 
-### Import Workflow
-
-```bash
-Open n8n
-→ Import Workflow
-→ Configure Credentials
-→ Execute Workflow
-```
+Open n8n → Import Workflow → Configure Credentials → Execute Workflow
 
 ---
 
 # 📈 Future Improvements
 
-- Machine Learning Risk Scoring
-- Real-Time Fraud Detection
-- Dashboard Integration
-- API Connectivity
-- WhatsApp Alerts
-- Cloud Deployment
+* Machine Learning Detection
+* Real-Time Monitoring
+* Dashboard Integration
+* API Connectivity
+* Cloud Deployment
 
 ---
 
@@ -238,14 +199,24 @@ Open n8n
 
 ## Ram Pachori
 
-MBA (Applied Finance)  
-Chitkara University  
+MBA (Applied Finance)
+Chitkara University
 
-AI • Workflow Automation • Fraud Analytics • Risk Monitoring
+Fraud Analytics • Automation • Risk Monitoring
 
-LinkedIn: *(Add your profile)*  
-GitHub: *(Add your GitHub link)*
+LinkedIn: *(Add Profile)*
+GitHub: *(Add GitHub URL)*
 
 ---
 
-## ⭐ If you found this project useful, give it a star.
+### ⭐ If you found this project useful, consider giving it a star.
+
+Then:
+
+```bash
+git add .
+git commit -m "update readme screenshots"
+git push
+```
+
+Refresh GitHub and screenshots should appear.
