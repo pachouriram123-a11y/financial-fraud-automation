@@ -1,219 +1,71 @@
-# 🚨 AI-Powered Fraud Monitoring & Alert Automation using n8n
+Create a professional GitHub README section for my project.
 
-<p align="center">
-  Automated Fraud Detection • Risk Scoring • Workflow Automation • Email Alerts
-</p>
+Project Name:
+AI-Powered Fraud Monitoring & Alert Automation using n8n
 
----
+Objective:
+Build an automated fraud detection workflow using n8n, Google Sheets, JavaScript, Gmail, and automated reporting.
 
-# 📌 Project Overview
+I want to ADD the uploaded screenshots + uploaded Excel dataset into README and explain each professionally.
 
-This project automates financial fraud monitoring using **n8n**, **Google Sheets**, **JavaScript**, and **Gmail**.
+Generate ONLY the new section to append to README.
 
-The workflow reads transaction data, evaluates fraud conditions using business rules, calculates a risk score, classifies transaction risk levels, updates monitoring records, and automatically sends alerts for suspicious activity.
+# 📸 Project Demonstration
 
-This project simulates a modern fraud monitoring process used in financial operations and risk management.
-
----
-
-# 🎯 Objectives
-
-- Automate fraud monitoring
-- Detect suspicious transactions
-- Generate automated alerts
-- Reduce manual review effort
-- Improve operational efficiency
-- Demonstrate AI + Workflow Automation
+Include these sections:
 
 ---
 
-# 🏗 Solution Architecture
+## 📊 Invoice Dataset (Google Sheets)
+![Invoice Dataset](./assets/invoice-dataset.png)
 
-```text
-Google Sheets
-      ↓
-Transaction Extraction
-      ↓
-n8n Workflow
-      ↓
-JavaScript Rule Engine
-      ↓
-Risk Scoring
-      ↓
-Risk Classification
-      ↓
-Update Dataset
-      ↓
-Email Notifications
-```
+Explain:
+- Professional invoice records maintained in Google Sheets
+- Structured financial dataset for automation
+- Includes invoice number, client details, GST, total amount, and payment status
+- Used as source data for downstream workflow execution
+
+Add 3–4 professional bullet points.
 
 ---
 
-# ⚙ Workflow Process
+## 📄 Professional Invoice Report (PDF Output)
+![Invoice Report](./assets/professional-invoice-report.png)
 
-### Step 1 — Read Transaction Dataset
-Import transaction records from Google Sheets.
+Explain:
+- Invoice extraction and automated report creation
+- PDF generation with business-ready formatting
+- Summary reporting for financial operations
+- Demonstrates automated document generation
 
-### Step 2 — Execute Fraud Logic
-Apply fraud detection rules.
-
-### Step 3 — Generate Risk Score
-Assign risk score based on rule triggers.
-
-### Step 4 — Update Monitoring Data
-Store:
-- Triggered Rules
-- Risk Score
-- Fraud Status
-
-### Step 5 — Send Automated Alerts
-Generate fraud notification emails.
+Add 3–4 professional bullet points.
 
 ---
 
-# 🧠 Fraud Detection Rules
+## 📁 Source Excel Dataset (invoice 2.xlsx)
+![Excel Dataset](./assets/invoice-excel.png)
 
-| Rule | Description |
-|------|-------------|
-| R1 | High Value Transaction |
-| R2 | Round Amount Detection |
-| R3 | Micro Pattern |
-| R4 | Impossible Travel |
-| R5 | Mule Account Pattern |
-| R6 | Off Hours Activity |
-| R7 | Dormant Account Spike |
-| R8 | First High Value |
-| R9 | Foreign Location |
-| R11 | UPI Abuse |
-| R12 | Cross Border Activity |
+Dataset Information:
+- 15 structured columns
+- Invoice records with financial calculations
+- GST amount and total invoice value
+- Payment tracking (Paid / Pending)
+- Client and service information
+- Used as input dataset for automation and reporting
 
----
-
-# 📊 Risk Classification
-
-| Risk Score | Status |
-|-----------|--------|
-| 0 | CLEAR |
-| 1 | LOW RISK |
-| 2–3 | MEDIUM RISK |
-| 4+ | HIGH RISK |
+Write a professional explanation section containing:
+- Purpose
+- Key columns
+- Business value
+- Automation use case
 
 ---
 
-# 📸 Project Screenshots
+Keep style:
+- Portfolio level
+- Clean markdown
+- Modern GitHub README
+- Professional formatting
+- Suitable for MBA Finance + Automation project
 
-## Fraud Monitoring Dataset
-
-<img src="./assetsgoogle-sheet.png.png" width="1000"/>
-
-Shows:
-- Transaction dataset
-- Triggered fraud rules
-- Risk score
-- Fraud status
-
----
-
-## 🔴 High Risk Alert
-
-<img src="./assetshigh-risk-alert.png.png" width="1000"/>
-
-Automated alert generated for high-risk transactions.
-
----
-
-## 🟠 Medium Risk Alert
-
-<img src="./assetsmedium-risk-alert.png.png" width="1000"/>
-
-Automated review notification.
-
----
-
-## 🔄 n8n Workflow Automation
-
-<img src="./n8n project.png" width="1000"/>
-
-Workflow showing:
-- Data extraction
-- Fraud evaluation
-- Conditional routing
-- Dataset update
-- Email notifications
-
----
-
-# 🛠 Tech Stack
-
-| Technology | Purpose |
-|-----------|---------|
-| n8n | Workflow Automation |
-| Google Sheets | Data Storage |
-| JavaScript | Fraud Logic |
-| Gmail | Email Alerts |
-| Risk Analytics | Monitoring |
-
----
-
-# 📂 Repository Structure
-
-```text
-financial-fraud-automation/
-│
-├── README.md
-├── Fraud monitoring data.json
-├── assetsgoogle-sheet.png.png
-├── assetshigh-risk-alert.png.png
-├── assetsmedium-risk-alert.png.png
-└── n8n project.png
-```
-
----
-
-# 🚀 Run Locally
-
-### Clone Repository
-
-```bash
-git clone https://github.com/your-username/financial-fraud-automation.git
-```
-
-### Open Project
-
-```text
-Open n8n
-↓
-Import Workflow JSON
-↓
-Configure Google + Gmail Credentials
-↓
-Execute Workflow
-```
-
----
-
-# 📈 Future Improvements
-
-- Machine Learning Fraud Detection
-- Real-Time Monitoring
-- Dashboard Integration
-- API Connectivity
-- WhatsApp Notifications
-- Cloud Deployment
-
----
-
-# 👨‍💻 Developed By
-
-## Ram Pachori
-
-MBA (Applied Finance)  
-Chitkara University  
-
-Fraud Analytics • Workflow Automation • Risk Monitoring
-
-GitHub: https://github.com/pachouriram123-a11y
-
----
-
-### ⭐ If you found this project useful, consider giving it a star.
+Output pure markdown only.
